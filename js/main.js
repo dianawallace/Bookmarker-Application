@@ -5,8 +5,14 @@ document.getElementById('myForm').addEventListener('submit', saveBookmark);
 function saveBookmark(e){
     //Get form values
     var siteName = document.getElementById('siteName').value;
-    var siteURL = document.getElementById('siteURL').value;
-    console.log(siteName);
+    var siteUrl = document.getElementById('siteUrl').value;
+    
+    var bookmark = {
+        name: siteName,
+        url: siteUrl
+    }
+
+    
     
     // Prevent form from submitting
     e.preventDefault();
