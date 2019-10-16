@@ -12,7 +12,8 @@ function saveBookmark(e){
         url: siteUrl
     }
 
-    
+    // Local Storage Test
+    localStorage.setItem('test', 'Hello World');
     
     // Prevent form from submitting
     e.preventDefault();
