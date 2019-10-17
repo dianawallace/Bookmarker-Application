@@ -12,12 +12,24 @@ function saveBookmark(e){
         url: siteUrl
     }
 
+    /*
     // Local Storage Test
     localStorage.setItem('test', 'Hello World');
     console.log(localStorage.getItem('test'));
     localStorage.removeItem('test');
     console.log(localStorage.getItem('test'));
-    
+    */
+
+    // Test if Bookmarks is null
+    if(localStorage.getItem('bookmarks') === null) {
+        // Init array
+        var bookmarks = [];
+        // Add to Array
+        bookmarks.push(bookmark);
+        // Set to LocalStorage
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    }
+
     // Prevent form from submitting
     e.preventDefault();
 }
