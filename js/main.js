@@ -31,6 +31,10 @@ function saveBookmark(e){
     } else {
         // Get bookmarks from LocalStorage
         var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+        // Add bookmark to array
+        bookmarks.push(bookmark);
+        // Re-set back to LocalStorage
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
 
     // Prevent form from submitting
