@@ -55,7 +55,10 @@ function fetchBookmarks() {
         var name = bookmarks[i].name;
         var url = bookmarks[i].url;
 
-        bookmarksResults.innerHTML += name;
+        bookmarksResults.innerHTML += '<div class="card bg-light text-dark card-body mt-3">'+
+                                      '<h3>'+name+
+                                      '</h3>'+
+                                      '</div>';
 
     }
 }
