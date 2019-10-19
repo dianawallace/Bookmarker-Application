@@ -57,6 +57,7 @@ function fetchBookmarks() {
 
         bookmarksResults.innerHTML += '<div class="card bg-light text-dark card-body mt-3">'+
                                       '<h3>'+name+
+                                      ' <a class="btn btn-outline-secondary" target="_blank" href="'+url+'">Visit</a> '
                                       '</h3>'+
                                       '</div>';
 
