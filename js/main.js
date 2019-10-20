@@ -41,6 +41,12 @@ function saveBookmark(e){
     e.preventDefault();
 }
 
+// Delete bookmarks
+function deleteBookmark(url) {
+    console.log(url);
+}
+
+
 // Fetch bookmarks
 function fetchBookmarks() {
     // Get bookmarks from LocalStorage
@@ -49,7 +55,7 @@ function fetchBookmarks() {
     // Get output id
     var bookmarksResults = document.getElementById('bookmarksResults');
 
-    //Build output
+    // Build output
     bookmarksResults.innerHTML = '';
     for(var i = 0; i < bookmarks.length; i++) {
         var name = bookmarks[i].name;
@@ -58,7 +64,7 @@ function fetchBookmarks() {
         bookmarksResults.innerHTML += '<div class="card bg-light text-dark card-body mt-3">'+
                                       '<h3>'+name+
                                       ' <a class="btn btn-outline-secondary" target="_blank" href="'+url+'">Visit</a> ' +
-                                      ' <a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger target="_blank" href="#">Delete</a> ' +
+                                      ' <a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger href="#">Delete</a> ' +
                                       '</h3>'+
                                       '</div>';
 
