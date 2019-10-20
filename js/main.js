@@ -43,7 +43,8 @@ function saveBookmark(e){
 
 // Delete bookmarks
 function deleteBookmark(url) {
-    console.log(url);
+    // Get bookmarks from LocalStorage
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
 }
 
 
