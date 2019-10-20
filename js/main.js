@@ -48,7 +48,8 @@ function deleteBookmark(url){
     // Loop through bookmarks
     for(var i = 0; i < bookmarks.length; i++){
         if(bookmarks[i].url == url){
-
+            // Remove from array
+            bookmarks.splice(i, 1);
         }
     }
 }
