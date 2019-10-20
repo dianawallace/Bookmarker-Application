@@ -21,7 +21,7 @@ function saveBookmark(e){
     */
 
     // Test if Bookmarks is null
-    if(localStorage.getItem('bookmarks') === null) {
+    if(localStorage.getItem('bookmarks') === null){
         // Init array
         var bookmarks = [];
         // Add to Array
@@ -42,14 +42,20 @@ function saveBookmark(e){
 }
 
 // Delete bookmarks
-function deleteBookmark(url) {
+function deleteBookmark(url){
     // Get bookmarks from LocalStorage
     var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+    // Loop through bookmarks
+    for(var i = 0; i < bookmarks.length; i++){
+        if(bookmarks[i].url == url){
+
+        }
+    }
 }
 
 
 // Fetch bookmarks
-function fetchBookmarks() {
+function fetchBookmarks(){
     // Get bookmarks from LocalStorage
     var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
 
