@@ -52,6 +52,8 @@ function deleteBookmark(url){
             bookmarks.splice(i, 1);
         }
     }
+    // Re-set back to LocalStorage
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 }
 
 
