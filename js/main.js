@@ -6,6 +6,11 @@ function saveBookmark(e){
     //Get form values
     var siteName = document.getElementById('siteName').value;
     var siteUrl = document.getElementById('siteUrl').value;
+
+    if(!siteName || !siteUrl){
+        alert('Please fill in the form');
+        return false;
+    }
     
     var bookmark = {
         name: siteName,
