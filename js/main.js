@@ -101,4 +101,6 @@ function validateForm(){
         alert('Please use a valid URL');
         return false;
     }
+
+    return true;
 }
