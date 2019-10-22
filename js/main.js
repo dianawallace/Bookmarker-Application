@@ -11,7 +11,15 @@ function saveBookmark(e){
         alert('Please fill in the form');
         return false;
     }
+
+    var expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+    var regex = new RegExp(expression);
     
+    if(!siteUrl.match(regex)){
+        alert('Please use a valid URL');
+        return false;
+    }
+
     var bookmark = {
         name: siteName,
         url: siteUrl
